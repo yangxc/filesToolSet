@@ -32,7 +32,7 @@ module StringProcess
 
   # 全文去除指定的内容
   def self.removeSpecifiedContent(document, specifiedContents)
-    if document.encoding != 'UTF-8'
+    if document.encoding != Encoding::UTF_8
       document = document.encode('UTF-8', 'GBK', :undef=> :replace, :invalid=>:replace, :replace=>'')
     end
     if ! document.valid_encoding?
