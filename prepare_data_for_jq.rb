@@ -25,4 +25,5 @@ fileInfos.each do |file|
   fileTitle = StringProcess.removeSpecifiedContent fileTitle, [/\s+\d+\s+/]
   fileContent = StringProcess.removeSpecifiedContent fileContent, [fileTitle]
   puts '*' * 100
+  puts fileContent
 end
